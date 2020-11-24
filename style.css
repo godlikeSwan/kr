@@ -1,0 +1,139 @@
+:root {
+    --primary: red;
+    --primary-light: #f88;
+    --primary-dark: #800;
+    --secondary: violet;
+    --secondary-light: rgb(233, 187, 233);
+    --secondary-dark: rgb(102, 54, 102);
+    --on-primary: #fff;
+    --on-secondary: #fff;
+    --background: var(--secondary-light);
+    --surface: white;
+    --on-surface: #000;
+    /* usage: var(--primary); */
+}
+html, body {
+    height: 100%;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--background);
+}
+header {
+    height: 70px;
+    margin-bottom: -70px;
+    text-align: right;
+    padding-right: 3%;
+    padding-top: 3px;
+}
+header span {
+    display: none;
+    font-size: 5rem;
+    color: var(--on-primary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: var(--surface);
+}
+.left-column {
+    float: left;
+    width: 20%;
+}
+h1, h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav {
+    margin-top: 30px;
+}
+nav h1 {
+    font-size: 2.7rem;
+    padding: 2rem 3rem;
+    color: var(--on-primary);
+}
+nav a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 1rem 2rem;
+    color: var(--primary);
+}
+nav a:visited {
+    color: var(--secondary);
+}
+.right-column {
+    margin-left: 20%;
+    margin-top: 20px;
+    border-left: var(--primary) solid 2px;
+}
+h1 {
+    font-size: 3rem;
+    padding: 2rem 3rem;
+    color: var(--secondary);
+}
+h2 {
+    font-size: 2.5rem;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+    color: var(--primary);
+}
+p {
+    font-size: 2rem;
+    text-indent: 5rem;
+    padding: 0 2rem;
+    color: var(--on-surface);
+}
+footer {
+    height: 50px;
+    margin-top: -50px;
+}
+.popup-menu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+}
+.popup-menu nav {
+    margin: 0;
+    background-color: var(--secondary);
+}
+.popup-menu a {
+    color: var(--on-secondary);
+}
+.popup-menu a:visited {
+    color: var(--primary);
+}
+.popup-menu[invis] {
+    display: none;
+}
+
+.float-fix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+header, footer {
+    position: relative;
+    z-index: 2;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        display: none;
+    }
+    .popup-menu nav {
+        display: block;
+    }
+    .right-column {
+        margin: 0;
+        border: 0;
+    }
+    header span {
+        display: inline;
+    }
+}

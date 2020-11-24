@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реляционные СУБД</title>
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        header
+        <a href="#"><span>&#x2630;</span></a>
+    </header>
+    <div class="main">
+        <div class="left-column">
+            <nav>
+                <h1>Меню</h1>
+                <a href="index.html">Главная</a>
+                <a href="history.html">История</a>
+                <a href="types.html">Виды</a>
+                <a href="mysql.html">MySQL</a>
+                <a href="vuln.html">Уязвимости</a>
+            </nav>
+        </div>
+        <div class="right-column">
+            <h1>Главная</h1>
+            <h2>О чём этот сайт?</h2>
+            <p>Здесь вы можете найти самую базовую информацию о реляционных базах данных и их системах управления.</p>
+            <h2>Что такое база данных?</h2>
+            <p>Ба́за да́нных — представленная в объективной форме совокупность самостоятельных материалов (статей, расчётов, нормативных актов, судебных решений и иных подобных материалов), систематизированных таким образом, чтобы эти материалы могли быть найдены и обработаны с помощью электронной вычислительной машины (ЭВМ).</p>
+        </div>
+    </div>
+    <footer>
+        footer
+    </footer>
+    <div class="popup-menu" invis>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="history.html">История</a>
+            <a href="types.html">Виды</a>
+            <a href="mysql.html">MySQL</a>
+            <a href="vuln.html">Уязвимости</a>
+        </nav>
+    </div>
+    <script>
+        document.querySelector('header a').onclick = () => {
+            const menu = document.querySelector('.popup-menu')
+            const attr = 'invis'
+            if (menu.hasAttribute(attr)) menu.removeAttribute(attr)
+            else menu.setAttribute(attr, '')
+        }
+    </script>
+</body>
+</html>

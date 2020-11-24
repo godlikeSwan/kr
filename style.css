@@ -1,15 +1,18 @@
 :root {
-    --primary: red;
+    --primary: rgb(99, 41, 8);
     --primary-light: #f88;
-    --primary-dark: #800;
+    --primary-dark: rgb(54, 29, 0);
     --secondary: violet;
     --secondary-light: rgb(233, 187, 233);
     --secondary-dark: rgb(102, 54, 102);
-    --on-primary: #fff;
-    --on-secondary: #fff;
-    --background: var(--secondary-light);
-    --surface: white;
-    --on-surface: #000;
+    --on-primary: rgb(196, 196, 196);
+    --on-secondary: rgb(54, 22, 0);
+    --background: var(--primary-dark);
+    --surface: rgb(0, 0, 0);
+    --on-surface: rgb(201, 201, 201);
+    --menu-background: var(--primary-dark);
+    --on-menu: var(--on-primary);
+    --on-menu-visited: var(--secondary);
     /* usage: var(--primary); */
 }
 html, body {
@@ -99,13 +102,13 @@ footer {
 }
 .popup-menu nav {
     margin: 0;
-    background-color: var(--secondary);
+    background-color: var(--menu-background);
 }
 .popup-menu a {
-    color: var(--on-secondary);
+    color: var(--on-menu);
 }
 .popup-menu a:visited {
-    color: var(--primary);
+    color: var(--on-menu-visited);
 }
 .popup-menu[invis] {
     display: none;
